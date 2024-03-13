@@ -2,7 +2,13 @@
 
 A reimplementation of [`cython_bbox`](https://github.com/samson-wang/cython_bbox) in Rust. It uses the [`pyo3`](https://pyo3.rs/v0.20.3/) crate to interface with Python.
 
+## Installation
 
+```bash
+pip install bboxrs
+```
+
+## Usage
 
 ```python
 from bboxrs import bbox_overlaps
