@@ -31,10 +31,10 @@ jobs:
           python-version: '3.11'
       - name: Build wheels
         uses: PyO3/maturin-action@v1
+        env:
+          SKIP: "cp312-* cp313-*"
         with:
           target: ${{ matrix.target }}
-          env:
-            SKIP: "cp312-* cp313-*"
           args: --release --out dist --find-interpreter
           sccache: 'true'
           manylinux: auto
@@ -57,10 +57,10 @@ jobs:
           architecture: ${{ matrix.target }}
       - name: Build wheels
         uses: PyO3/maturin-action@v1
+        env:
+          SKIP: "cp312-* cp313-*"
         with:
           target: ${{ matrix.target }}
-          env:
-            SKIP: "cp312-* cp313-*"
           args: --release --out dist --find-interpreter
           sccache: 'true'
       - name: Upload wheels
@@ -81,10 +81,10 @@ jobs:
           python-version: '3.11'
       - name: Build wheels
         uses: PyO3/maturin-action@v1
+        env:
+          SKIP: "cp312-* cp313-*"
         with:
           target: ${{ matrix.target }}
-          env:
-            SKIP: "cp312-* cp313-*"
           args: --release --out dist --find-interpreter
           sccache: 'true'
       - name: Upload wheels
