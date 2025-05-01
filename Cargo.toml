@@ -12,3 +12,4 @@ crate-type = ["cdylib"]
 ndarray = "0.15.6"
 numpy = "0.20.0"
 pyo3 = "0.20.0"
+rayon = "1"

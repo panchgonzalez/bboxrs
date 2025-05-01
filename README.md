@@ -21,5 +21,8 @@ dt = np.random.random((10, 4)).astype(float)
 overlaps = bbox_overlaps(dt, gt)
 ```
 
-**Disclaimer**
-- This is about an order of magnitude slower than the Cython implementation. Probably because I had to do a couple of unnecessary conversions. This is really just an exercise in learning Rust and interfacing with Python.
+**Speed Up**
+
+Looks to be slightly faster than than `cython_bbox` for very large arrays of bounding boxes.
+
+![Speed comparison chart showing bboxrs performance](doc/speedup.png)
